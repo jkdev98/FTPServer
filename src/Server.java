@@ -1,7 +1,6 @@
 import org.apache.ftpserver.ConnectionConfig;
 import org.apache.ftpserver.FtpServer;
 import org.apache.ftpserver.FtpServerFactory;
-import org.apache.ftpserver.impl.DefaultFtpServerContext;
 import org.apache.ftpserver.listener.ListenerFactory;
 import org.apache.ftpserver.ssl.SslConfigurationFactory;
 import org.apache.log4j.Logger;
@@ -13,13 +12,12 @@ import java.io.File;
 public class Server {
 
     private static final FtpServerFactory serverFactory = new FtpServerFactory();
-    private DefaultFtpServerContext defaultFtpServerContext = new DefaultFtpServerContext();
 
     private static final ListenerFactory listener = new ListenerFactory();
 
     private FtpUserBase userBase;
 
-    public Server(FtpUserBase userBase) {
+    Server(FtpUserBase userBase) {
        this.userBase = userBase;
     }
 
@@ -42,8 +40,8 @@ public class Server {
     void startServer() {
       //  setSSL();
 
-        Logger logger = Logger.getLogger(org.apache.log4j.Logger.class);
-        logger.isTraceEnabled();
+        //Logger logger = Logger.getLogger(org.apache.log4j.Logger.class);
+        //logger.isTraceEnabled();
         serverFactory.setUserManager(userBase.getUserManager());
         serverFactory.setConnectionConfig(new ConnectionConfig() {
             @Override

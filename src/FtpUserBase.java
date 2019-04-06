@@ -1,5 +1,4 @@
 import org.apache.ftpserver.ftplet.*;
-import org.apache.ftpserver.usermanager.*;
 import org.apache.ftpserver.usermanager.impl.BaseUser;
 import org.apache.ftpserver.usermanager.impl.ConcurrentLoginPermission;
 import org.apache.ftpserver.usermanager.impl.TransferRatePermission;
@@ -12,12 +11,7 @@ import java.util.Scanner;
 
 
 class FtpUserBase {
-    private final PropertiesUserManagerFactory userManagerFactory = new PropertiesUserManagerFactory();
-    private final UserManager um = userManagerFactory.createUserManager();
-
-    void createFactory() {
-        userManagerFactory.setPasswordEncryptor(new SaltedPasswordEncryptor());
-    }
+    private final MyUserManager userManager = new MyUserManager();
 
     private void addUser(String name, String passwd, File FtpRoot) throws FtpException {
 
@@ -36,11 +30,12 @@ class FtpUserBase {
         authorities.add(new WritePermission());
         authorities.add(new TransferRatePermission(0, 0));
         user.setAuthorities(authorities);
-        um.save(user);
+        userManager.save(user);
+        //um.save(user);
     }
 
     UserManager getUserManager() {
-        return this.um;
+        return this.userManager;
     }
 
 
