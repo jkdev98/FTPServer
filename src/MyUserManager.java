@@ -17,27 +17,27 @@ public class MyUserManager extends AbstractUserManager {
     }
 
     @Override
-    public User getUserByName(String userName) throws FtpException {
+    public User getUserByName(String userName) {
         return userMap.get(userName);
     }
 
     @Override
-    public String[] getAllUserNames() throws FtpException {
+    public String[] getAllUserNames() {
         return (String[]) userMap.keySet().toArray();
     }
 
     @Override
-    public void delete(String name) throws FtpException {
+    public void delete(String name) {
         userMap.remove(name);
     }
 
     @Override
-    public void save(User user) throws FtpException {
+    public void save(User user) {
         userMap.put(user.getName(), user);
     }
 
     @Override
-    public boolean doesExist(String name) throws FtpException {
+    public boolean doesExist(String name) {
         return userMap.containsKey(name);
     }
 

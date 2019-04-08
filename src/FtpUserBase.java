@@ -13,11 +13,11 @@ import java.util.Scanner;
 class FtpUserBase {
     private final MyUserManager userManager = new MyUserManager();
 
-    private void addUser(String name, String passwd, File FtpRoot) throws FtpException {
+    private void addUser(String name, String password, File FtpRoot) throws FtpException {
 
         BaseUser user = new BaseUser();
         user.setName(name);
-        user.setPassword(passwd);
+        user.setPassword(password);
         user.setHomeDirectory("C:\\\\Users\\jkdev\\dirs\\" + name + "\\");
         File userHome = new File(FtpRoot, name);
         userHome.mkdirs();

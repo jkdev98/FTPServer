@@ -10,8 +10,6 @@ public class Test {
         File temporaryFtpRoot = new File(tmpDirectory, "ftp");
         FtpUserBase userBase = new FtpUserBase();
 
-        //  userBase.createFactory();
-
         userBase.loadUserConfiguration(new File("./src/config.txt"), temporaryFtpRoot);
 
         Server ftpServer = new Server(userBase);
