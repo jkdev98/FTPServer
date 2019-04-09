@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55773779-6b35-405e-8582-ddfb966f407b" name="Default Changelist" comment="" />
+    <list default="true" id="55773779-6b35-405e-8582-ddfb966f407b" name="Default Changelist" comment="Fixed the Log4j error by adding log4j.xml configuration file, now the app logs all the server actions to the console and to the file.&#10;Fixed the paths problems so now server should work on every system supporting Java and JVM.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTPserver/FtpUserBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTPserver/FtpUserBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTPserver/MyUserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTPserver/MyUserManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTPserver/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTPserver/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTPserver/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTPserver/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTPserver/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTPserver/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTPserver/config.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FTPserver/ftp/logs/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FTPserver/ftp/logs/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ftp/logs/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/ftp/logs/log4j.properties" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,16 +21,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="264">
+              <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -27,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FtpUserBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
+            <state relative-caret-position="216">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#addUser#0;class#FtpUserBase#0" />
@@ -37,25 +47,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyUserManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-599">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="-173">
+              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#664#665#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
+                <element signature="e#1007#1008#0" expanded="true" />
+                <element signature="e#1056#1057#0" expanded="true" />
+                <element signature="e#1114#1115#0" expanded="true" />
+                <element signature="e#1162#1163#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+            <state relative-caret-position="120">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,13 +88,16 @@
       <find>addUser</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/MyUserManager.java" />
         <option value="$PROJECT_DIR$/src/FtpUserBase.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/Server.java" />
-        <option value="$PROJECT_DIR$/src/MyUserManager.java" />
       </list>
     </option>
   </component>
@@ -97,12 +118,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="FTPserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTPserver" type="462c0819:PsiDirectoryNode" />
+              <item name="FTPServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTPServer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="FTPserver" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTPserver" type="462c0819:PsiDirectoryNode" />
+              <item name="FTPServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTPServer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -162,11 +183,27 @@
       <option name="presentableId" value="Default" />
       <updated>1554569248081</updated>
       <workItem from="1554569251461" duration="6300000" />
+      <workItem from="1554763981887" duration="5474000" />
     </task>
+    <task id="LOCAL-00001" summary="Few little changes to test if the git config for IntelliJ is working.">
+      <created>1554764130455</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554764130455</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed the Log4j error by adding log4j.xml configuration file, now the app logs all the server actions to the console and to the file.&#10;Fixed the paths problems so now server should work on every system supporting Java and JVM.">
+      <created>1554770940869</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554770940869</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6300000" />
+    <option name="totallyTimeSpent" value="11774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -177,7 +214,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.16684435" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1684435" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -186,10 +223,10 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.3296582" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.35501653" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3296582" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="right" id="Theme Preview" order="0" />
@@ -206,28 +243,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Few little changes to test if the git config for IntelliJ is working." />
+    <MESSAGE value="Fixed the Log4j error by adding log4j.xml configuration file, now the app logs all the server actions to the console and to the file.&#10;Fixed the paths problems so now server should work on every system supporting Java and JVM." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the Log4j error by adding log4j.xml configuration file, now the app logs all the server actions to the console and to the file.&#10;Fixed the paths problems so now server should work on every system supporting Java and JVM." />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FtpUserBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
+        <state relative-caret-position="216">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#addUser#0;class#FtpUserBase#0" />
@@ -235,14 +260,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyUserManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-599">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="-173">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

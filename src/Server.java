@@ -1,11 +1,7 @@
 import org.apache.ftpserver.ConnectionConfig;
 import org.apache.ftpserver.FtpServer;
 import org.apache.ftpserver.FtpServerFactory;
-import org.apache.ftpserver.impl.DefaultFtpServerContext;
 import org.apache.ftpserver.listener.ListenerFactory;
-
-
-import java.io.IOException;
 
 
 class Server {
@@ -25,7 +21,7 @@ class Server {
     }
 
     void startServer()  {
-        
+
         serverFactory.setUserManager(userBase.getUserManager());
 
         serverFactory.setConnectionConfig(new ConnectionConfig() {
