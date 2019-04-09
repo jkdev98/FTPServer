@@ -13,7 +13,7 @@ import java.util.Scanner;
 class FtpUserBase {
     private final MyUserManager userManager = new MyUserManager();
 
-    private void addUser(String name, String password, File FtpRoot) throws FtpException {
+    private void addUser(String name, String password, File FtpRoot)  {
 
         BaseUser user = new BaseUser();
         user.setName(name);

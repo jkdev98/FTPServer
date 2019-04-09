@@ -8,9 +8,10 @@ public class Test {
         temporaryFileToDelete.delete();
         File tmpDirectory = temporaryFileToDelete.getParentFile();
         File temporaryFtpRoot = new File(tmpDirectory, "ftp");
+
         FtpUserBase userBase = new FtpUserBase();
 
-        userBase.loadUserConfiguration(new File("./src/config.txt"), temporaryFtpRoot);
+        userBase.loadUserConfiguration(new File("./src/config/users.txt"), temporaryFtpRoot);
 
         Server ftpServer = new Server(userBase);
 
